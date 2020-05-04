@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col, Button } from 'react-bootstrap'
 import MyLabelComponent from '../core-components/MyLabelComponent'
+import MyButtonComponent from '../core-components/MyButtonComponent'
 
 const PeerlyFormComponent = (props) => {
   const [isLogin, setIsLogin] = useState(false);
@@ -17,11 +18,11 @@ const PeerlyFormComponent = (props) => {
       <div className="mt-5" style={{ height: 200, paddingLeft: 115 }}>
         <Row>
           <Col>
-            <Button className="btn btn-dark" onClick={(e) => {
-              setIsLogin(true);
-            }}>
-              Sign Up
-            </Button>
+            <MyButtonComponent 
+              allClasses="btn btn-dark"
+              onClick={setIsLogin}
+              buttonText="Sign Up"
+            />
           </Col>
           <Col>
             <Button
